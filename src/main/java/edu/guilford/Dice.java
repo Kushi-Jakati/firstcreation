@@ -2,11 +2,15 @@ package edu.guilford;
 
 public class Dice {
     
-    //attributes 
+    //Attributes 
     private int numSides;; 
     private int value;
 
-    //Constructors 
+    //Constructor
+    public Dice(int numSides) {
+        this.numSides = numSides;
+    }
+    
     public Dice() {
         numSides = 6; 
         value = 0; 
@@ -18,10 +22,11 @@ public class Dice {
         return value; 
     } //end roll
 
-    //Constructor
-    public Dice(int numSides) {
-        this.numSides = numSides;
+    //Helper Methods
+    public String toString() {
+        return "Dice [numSides=" + numSides + ", value=" + value + "]";
     }
+
 
     //Getters and Setters
     public int getNumSides() {
