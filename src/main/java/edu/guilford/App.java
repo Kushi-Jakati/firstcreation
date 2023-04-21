@@ -1,5 +1,7 @@
 package edu.guilford;
 
+import java.util.ArrayList;
+
 /**
  * Hello world!
  *
@@ -8,13 +10,25 @@ public class App
 {
     public static void main( String[] args )
     {
-        System.out.println("Hello World!");
-        System.out.println("Commit working check."); 
-    } //end main 
+        ArrayList<Dogs> allDogs = new ArrayList<Dogs>();
+        
+        //Instantiate dog object
+         Dogs dog1 = new Dogs("Spot", "Poodle", 10, 100.0);
+         allDogs.add(dog1);
+            
+        //loop that instantiates 5 dog objects and adds them to an arraylist
+        for (int i = 0; i < 4; i++) {
+            Dogs dog = new Dogs("Fido", "Pitbull");
+            allDogs.add(dog);
+        }
 
-    //Instantiate three Dice objects 
-    Dice d1 = new Dice(6);
-    Dice d2 = new Dice(6);
-    Dice d3 = new Dice(6);
+        //loop through arraylist and print out all info
+        String allInfo = ""; 
+        for (Dogs dog : allDogs) {
+            allInfo = dog.toString() + "\n" + "Life Expectancy: " + dog.liklihoodOfDeath() + "\n";
+            System.out.println(allInfo);
+        }
+    
+    }
 
 }
