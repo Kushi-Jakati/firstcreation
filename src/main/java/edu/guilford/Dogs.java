@@ -2,7 +2,6 @@ package edu.guilford;
 
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.lang.System.Logger.Level;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
