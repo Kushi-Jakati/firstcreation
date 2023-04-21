@@ -1,12 +1,17 @@
 package edu.guilford;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.lang.System.Logger.Level;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 public class Dogs {
-    
+    DecimalFormat formatter = new DecimalFormat("0.00");
+
     //attributes
     private String name;
     private String breed;
@@ -14,7 +19,8 @@ public class Dogs {
     private double weight;
     private Random rand = new Random();
     private ArrayList<Dogs> allDogs = new ArrayList<Dogs>();
-    //Scanner inputFile = new Scanner(new File("dogNames.txt"));
+    
+
 
 
     //constructor
@@ -39,7 +45,7 @@ public class Dogs {
         "The name is " + name + "\n" +
         "The breed is " + breed + "\n" +
         "The age is " + age + "\n" + 
-        "Finally, the weight is " + weight; 
+        "Finally, the weight is " + formatter.format(weight); 
     }
 
     //Helper methods: calculates liklihood of death based on randomly generated numbers
@@ -87,5 +93,6 @@ public class Dogs {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
 
 }
