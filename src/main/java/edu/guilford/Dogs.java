@@ -35,7 +35,7 @@ public class Dogs {
         this.name = name;
         this.breed = breed;
         this.age = rand.nextInt(28);
-        this.weight = rand.nextDouble(120);
+        this.weight = rand.nextDouble() * 120;
     }
 
     //toString method
